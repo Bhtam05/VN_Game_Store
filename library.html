@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư Viện Game | VN GAME STORE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/library.css" />
+  </head>
+  <body>
+    <a href="index.html" class="back-btn"
+      ><i class="fas fa-arrow-left"></i> Quay lại cửa hàng</a
+    >
+    <header class="main-header" id="header-container"></header>
+
+    <main class="library-container container">
+      <aside class="lib-sidebar">
+        <h3>BỘ SƯU TẬP</h3>
+        <div class="lib-search">
+          <input
+            type="text"
+            id="lib-search-input"
+            placeholder="Tìm trong thư viện..."
+          />
+        </div>
+        <ul class="lib-filter">
+          <li class="active" data-filter="all">
+            Tất cả game (<span id="lib-total-count">0</span>)
+          </li>
+        </ul>
+      </aside>
+
+      <section class="lib-content">
+        <h1 class="lib-title">Thư viện của tôi</h1>
+        <div class="lib-grid" id="lib-game-list"></div>
+      </section>
+    </main>
+
+    <div id="game-launcher" class="launcher-overlay">
+      <div class="launcher-content">
+        <div class="launcher-header">
+          <span class="launcher-title">VN GAME STORE - SYSTEM</span>
+          <button class="close-launcher" onclick="closeLauncher()">
+            &times;
+          </button>
+        </div>
+        <div class="launcher-body">
+          <div id="launcher-game-img" class="game-thumb"></div>
+          <div class="launch-info">
+            <h2 id="launcher-game-title">Đang khởi động...</h2>
+            <p id="launcher-status">Kiểm tra tài nguyên hệ thống...</p>
+            <div class="progress-container">
+              <div id="launch-progress" class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="launcher-footer">
+          <span class="version">Version 2.0.26</span>
+          <span class="engine">Powered by VNGame Engine</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/library.js"></script>
+  </body>
+</html>

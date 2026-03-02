@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VN Game Store | Thế Giới Game Bản Quyền</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="container header-inner">
+        <div class="logo">VN GAME <span>STORE</span></div>
+        <ul class="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li class="dropdown">
+            <a href="#">Thể Loại <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content" id="category-list"></ul>
+          </li>
+          <li class="cart-nav">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-badge">0</span>
+            </a>
+          </li>
+          <li id="auth-buttons">
+            <a href="login.html" class="btn-login">Đăng Nhập</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 id="hero-title">Black Myth: Wukong</h1>
+        <p id="hero-desc">
+          Hóa thân thành Tôn Ngộ Không trong siêu phẩm hành động nhập vai.
+        </p>
+        <div class="hero-btns">
+          <a href="detail.html?id=1" class="btn btn-detail">Xem chi tiết</a>
+
+          <a href="javascript:void(0)" onclick="buyNow(1)" class="btn btn-buy"
+            >Mua ngay</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <div class="container search-container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Tìm tên game, nhà phát hành..."
+          />
+        </div>
+      </div>
+      <h2 class="section-title">Khám Phá Game Mới</h2>
+      <div class="game-grid" id="game-display"></div>
+      <div class="pagination" id="pagination"></div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <h3>VN GAME STORE</h3>
+          <p>Cửa hàng game uy tín số 1 VN.</p>
+        </div>
+        <div>
+          <h3>Liên hệ</h3>
+          <p>Email: support@vngame.com</p>
+          <p>Hotline: 1900 xxxx</p>
+        </div>
+        <div>
+          <h3>Mạng xã hội</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2024 VN Game Store. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+    <div id="toast-container"></div>
+  </body>
+</html>

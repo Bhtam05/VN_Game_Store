@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán | VN GAME STORE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <a href="index.html" class="back-btn"
+        ><i class="fas fa-arrow-left"></i> Quay lại cửa hàng</a
+      >
+
+      <div class="cart-grid">
+        <div class="cart-main">
+          <h1 class="section-title">Giỏ hàng của bạn</h1>
+          <div id="cart-items-container"></div>
+        </div>
+
+        <aside class="cart-sidebar">
+          <div class="summary-box">
+            <h2>Đơn hàng</h2>
+            <div class="summary-item">
+              <span>Số lượng</span>
+              <span id="cart-count">0</span>
+            </div>
+            <div class="summary-item total">
+              <span>Tổng cộng</span>
+              <span id="total-price">0 đ</span>
+            </div>
+
+            <div class="payment-methods">
+              <p>Phương thức thanh toán</p>
+              <div class="method-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-paypal"></i>
+              </div>
+            </div>
+
+            <button class="btn-checkout" onclick="processCheckout()">
+              THANH TOÁN NGAY
+            </button>
+            <p class="secure-text">
+              <i class="fas fa-lock"></i> Thanh toán bảo mật 100%
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

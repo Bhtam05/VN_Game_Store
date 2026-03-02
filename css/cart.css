@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background-color: #0b0e13;
+  color: white;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.checkout-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #888;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.back-btn:hover {
+  color: #00d4ff;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #2a2e38;
+  padding-bottom: 15px;
+}
+
+/* Item Card */
+.cart-item {
+  display: flex;
+  gap: 20px;
+  background: #161a21;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  align-items: center;
+  border: 1px solid #2a2e38;
+}
+
+.cart-item img {
+  width: 140px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-info {
+  flex: 1;
+}
+.item-info h4 {
+  margin: 0 0 5px;
+  font-size: 1.2rem;
+}
+.item-info p {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.item-price-remove {
+  text-align: right;
+}
+.price {
+  display: block;
+  font-weight: bold;
+  color: #00d4ff;
+  font-size: 1.1rem;
+}
+.btn-remove {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  padding: 0;
+}
+
+/* Sidebar Summary */
+.summary-box {
+  background: #161a21;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2a2e38;
+  position: sticky;
+  top: 40px;
+}
+.summary-box h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #aaa;
+}
+.summary-item.total {
+  border-top: 1px solid #333;
+  pt: 20px;
+  mt: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.payment-methods {
+  margin-top: 30px;
+}
+.payment-methods p {
+  font-size: 0.8rem;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.method-icons {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 15px;
+  color: #444;
+}
+
+.btn-checkout {
+  width: 100%;
+  padding: 18px;
+  background: #00d4ff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 25px 0 10px;
+  transition: 0.3s;
+}
+.btn-checkout:hover {
+  background: #00b4db;
+  transform: scale(1.02);
+}
+
+.secure-text {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #444;
+  margin: 0;
+}

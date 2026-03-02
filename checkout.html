@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán | VN GAME STORE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body>
+    <header id="header-container"></header>
+
+    <main class="checkout-container container">
+      <div class="checkout-layout">
+        <div class="checkout-left">
+          <h2 class="title-blue">Thanh Toán</h2>
+
+          <div class="form-section">
+            <h3>Phương thức thanh toán</h3>
+            <div class="payment-methods">
+              <label class="method-item active">
+                <input type="radio" name="payment" checked />
+                <span><i class="fas fa-wallet"></i> Ví Momo (QR Code)</span>
+              </label>
+              <label class="method-item">
+                <input type="radio" name="payment" />
+                <span
+                  ><i class="fas fa-university"></i> Chuyển khoản ngân
+                  hàng</span
+                >
+              </label>
+              <label class="method-item">
+                <input type="radio" name="payment" />
+                <span><i class="fab fa-paypal"></i> PayPal</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-right" id="order-summary"></div>
+      </div>
+    </main>
+
+    <div id="toast-container"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

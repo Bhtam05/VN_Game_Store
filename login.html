@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xác thực | VN GAME STORE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="auth-wrapper">
+      <a href="index.html" class="back-home"
+        ><i class="fas fa-arrow-left"></i> Quay lại trang chủ</a
+      >
+
+      <div class="auth-container">
+        <div class="auth-box active" id="login-form">
+          <h2>ĐĂNG NHẬP</h2>
+          <p class="subtitle">Chào mừng thợ săn game quay trở lại!</p>
+          <div class="input-group">
+            <input
+              type="text"
+              id="login-account"
+              placeholder="Username hoặc Email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="login-pw"
+              placeholder="Mật khẩu"
+              required
+            />
+            <i class="fas fa-eye toggle-password"></i>
+          </div>
+          <div class="extra-options">
+            <label><input type="checkbox" id="remember-me" /> Ghi nhớ</label>
+            <a href="javascript:void(0)" onclick="switchForm('forgot-form')"
+              >Quên mật khẩu?</a
+            >
+          </div>
+          <button class="btn-auth" onclick="handleLogin()">ĐĂNG NHẬP</button>
+          <p class="switch-text">
+            Chưa có tài khoản?
+            <a href="javascript:void(0)" onclick="switchForm('register-form')"
+              >Đăng ký ngay</a
+            >
+          </p>
+        </div>
+
+        <div class="auth-box" id="register-form">
+          <h2>ĐĂNG KÝ</h2>
+          <div class="input-group">
+            <input
+              type="text"
+              id="reg-user"
+              placeholder="Username (tối thiểu 4 ký tự)"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              id="reg-email"
+              placeholder="Email (Gmail hợp lệ)"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="reg-pw"
+              placeholder="Mật khẩu (tối thiểu 6 ký tự)"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="reg-pw-conf"
+              placeholder="Xác nhận mật khẩu"
+              required
+            />
+          </div>
+          <button class="btn-auth" onclick="handleRegister()">
+            TẠO TÀI KHOẢN
+          </button>
+          <p class="switch-text">
+            Đã có tài khoản?
+            <a href="javascript:void(0)" onclick="switchForm('login-form')"
+              >Đăng nhập</a
+            >
+          </p>
+        </div>
+
+        <div class="auth-box" id="forgot-form">
+          <div id="step-1">
+            <h2>QUÊN MẬT KHẨU</h2>
+            <p class="subtitle">Nhập email để nhận mã xác nhận</p>
+            <div class="input-group">
+              <input
+                type="email"
+                id="forgot-email"
+                placeholder="Nhập Email của bạn"
+              />
+            </div>
+            <button
+              class="btn-auth"
+              id="btn-send-code"
+              onclick="sendResetCode()"
+            >
+              GỬI MÃ XÁC NHẬN
+            </button>
+          </div>
+
+          <div id="step-2" style="display: none">
+            <h2>XÁC MINH</h2>
+            <p class="subtitle">Nhập mã 6 chữ số vừa gửi đến email</p>
+            <div class="input-group">
+              <input
+                type="text"
+                id="verify-code"
+                placeholder="Mã xác nhận (VD: 123456)"
+              />
+            </div>
+            <p id="timer">Thời gian còn lại: 60s</p>
+            <button class="btn-auth" onclick="verifyCode()">XÁC NHẬN MÃ</button>
+          </div>
+
+          <div id="step-3" style="display: none">
+            <h2>ĐẶT LẠI MẬT KHẨU</h2>
+            <div class="input-group">
+              <input type="password" id="new-pw" placeholder="Mật khẩu mới" />
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                id="new-pw-conf"
+                placeholder="Xác nhận mật khẩu mới"
+              />
+            </div>
+            <button class="btn-auth" onclick="resetPassword()">
+              CẬP NHẬT MẬT KHẨU
+            </button>
+          </div>
+          <p class="switch-text">
+            <a href="javascript:void(0)" onclick="switchForm('login-form')"
+              >Quay lại đăng nhập</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>

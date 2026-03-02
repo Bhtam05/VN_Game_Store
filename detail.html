@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Tiết Game | VN GAME STORE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">VN GAME <span>STORE</span></div>
+        <ul class="menu">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li class="cart-nav">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-badge">0</span>
+            </a>
+          </li>
+          <li id="auth-buttons">
+            <a href="login.html" class="btn-login">Đăng Nhập</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container detail-wrapper">
+      <div class="main-content">
+        <div class="media-section">
+          <div class="main-display" id="main-media"></div>
+          <div class="thumbnail-gallery" id="thumb-gallery"></div>
+        </div>
+
+        <div class="about-game">
+          <h3>GIỚI THIỆU VỀ TRÒ CHƠI</h3>
+          <div class="divider"></div>
+          <p id="game-desc-full"></p>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="side-card">
+          <img id="game-poster" src="" alt="Poster" class="side-poster" />
+          <h1 id="game-title-side"></h1>
+
+          <div class="info-list">
+            <div class="info-item">
+              <span>NGÀY PHÁT HÀNH:</span> <b id="release-date"></b>
+            </div>
+            <div class="info-item">
+              <span>NHÀ PHÁT TRIỂN:</span> <b id="developer"></b>
+            </div>
+            <div class="info-item">
+              <span>NHÀ XUẤT BẢN:</span> <b id="publisher"></b>
+            </div>
+          </div>
+
+          <div class="side-tags" id="side-tags"></div>
+
+          <div class="purchase-container">
+            <div class="price-group">
+              <span class="curr-price" id="price-val"></span>
+              <span class="old-price" id="old-price-val"></span>
+            </div>
+            <button class="btn-buy" id="btn-add-cart">
+              <i class="fas fa-shopping-cart"></i> THÊM VÀO GIỎ
+            </button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/detail.js"></script>
+
+    <div id="toast-container"></div>
+  </body>
+</html>

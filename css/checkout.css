@@ -1,0 +1,169 @@
+/* Layout tổng thể */
+.checkout-container {
+  padding: 120px 20px 50px;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Cột bên trái: Thanh toán & Phương thức */
+.checkout-left {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.title-blue {
+  color: #0088ff;
+  font-size: 24px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+#checkout-email {
+  width: 100%;
+  padding: 12px;
+  background: #252525;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Phương thức thanh toán */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.method-item {
+  background: #252525;
+  border: 1px solid #444;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.method-item:hover {
+  background: #333;
+}
+
+.method-item input[type="radio"] {
+  accent-color: #0088ff;
+}
+
+.method-item.active {
+  border-color: #0088ff;
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.2);
+}
+
+/* Cột bên phải: Tóm tắt đơn hàng */
+.checkout-right {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.order-summary-box h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Từng item game */
+.summary-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #222;
+}
+
+.summary-item img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-info p {
+  margin: 0;
+  font-weight: bold;
+  color: #eee;
+}
+
+.item-info small {
+  color: #777;
+}
+
+.price-green {
+  color: #00ff00;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+/* Chi tiết hóa đơn */
+.bill-details {
+  margin-top: 20px;
+}
+
+.bill-details p {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+/* Nút Place Order */
+.btn-place-order {
+  width: 100%;
+  padding: 18px;
+  background: #0088ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.btn-place-order:hover {
+  background: #0066cc;
+  transform: translateY(-2px);
+}
